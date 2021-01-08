@@ -4,6 +4,7 @@ const app = express();
 
 //use express router
 app.use("/",require("./routes"));
+
 app.listen(port,function(error){
     if(error){
         console.log(`Error in running the server: ${error}`);
