@@ -5,6 +5,11 @@ const app = express();
 const expressLayouts = require("express-ejs-layouts");
 app.use(expressLayouts);
 
+app.use(express.static("./assets"));
+//extract style and scripts from subpages into the layout
+app.set("layout extractStyles",true);
+app.set("layout extractScripts",true);
+
 // set up the view engine
 app.set("view engine","ejs");
 app.set("views","./views");
