@@ -12,6 +12,9 @@ const session = require("express-session");
 const passport = require("passport");
 const passportLocal = require("./config/passport-local-strategy");
 
+//require connect-mongo to persistently store session cookies
+const MongoStore = require("connect-mongo")(session);
+
 
 //require cookie-parser and use it
 const cookieParser = require("cookie-parser");
@@ -37,9 +40,15 @@ app.use(session({
     resave:false,
     cookie:{
         maxAge: (1000*60*100)
-    }
-    //ok sir ka bhi home pe ja rha.. pr mera to load hi hota reh ja rha.. aisa kyu?
-    //achawait wo tumhare mai figure out krti hun
+    },
+    store: new MongoStore(
+    {
+        mongooseConnection:db,
+        autoRemove: "disabled"
+    },function(err){
+        console.log(err, "connect mongodb setup ok");
+      })
+  
 }));
 
 app.use(passport.initialize());
