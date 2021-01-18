@@ -1,0 +1,38 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 8vh;
+  background-color: #242526;
+  color: white;
+  padding: 0 1%;
+  font-size: 1rem;
+  border-bottom: 0.1px solid black;
+  box-shadow: 0 2px 5px 1px grey; }
+
+li {
+  list-style: none; }
+
+a {
+  text-decoration: none;
+  color: white; }
+
+#logo-image img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%; }
+
+#logo-name {
+  margin: 0 0.5rem;
+  font-size: 1.5rem; }
+
+div#logo {
+  display: flex;
+  align-items: center; }
+
+.header-links ul {
+  display: flex;
+  justify-content: space-between; }
+
+.header-links ul li {
+  padding: 0 0.5rem; }

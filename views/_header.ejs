@@ -1,27 +1,36 @@
 <header>
-    page Header
+    <div id="logo">
+        <div id="logo-image">
+            <img src="https://repository-images.githubusercontent.com/295963083/1a1f0300-1aa8-11eb-93bd-805dc6856535" alt="Logo-Image">
+        </div>
+        <div id="logo-name">
+            Codeial
+        </div>
+    </div>
 
-    <ul>
-        <!-- if the user is signed in -->
-        <% if(locals.user){ %>  
-            <li> 
-                <a href="/users/profile">
-                    <%= user.name %> 
-                </a>
-            </li>
-            <li>
-                <a href="/users/sign-out">Sign-out</a>
-            </li> 
-        <!-- if the user is not signed-in  -->
-        <% }else{ %>
-            <li>
-                <a href="/users/sign-in">Sign-In</a>
-            </li>
-
-            <li>
-                <a href="/users/sign-up">Sign-Up</a>
-            </li>
-        <% } %>
-    </ul>
+    <div class="header-links">
+        <ul>
+            <!-- if the user is signed in -->
+            <% if(locals.user){ %>  
+                <li> 
+                    <a href="/users/profile">
+                        <%= user.name %> 
+                    </a>
+                </li>
+                <li>
+                    <a href="/users/sign-out">Sign-out</a>
+                </li> 
+            <!-- if the user is not signed-in  -->
+            <% }else{ %>
+                <li>
+                    <a href="/users/sign-in">Sign-In</a>
+                </li>
+    
+                <li>
+                    <a href="/users/sign-up">Sign-Up</a>
+                </li>
+            <% } %>
+        </ul>
+    </div>
 
 </header>

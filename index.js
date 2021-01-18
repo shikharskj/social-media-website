@@ -15,6 +15,22 @@ const passportLocal = require("./config/passport-local-strategy");
 //require connect-mongo to persistently store session cookies
 const MongoStore = require("connect-mongo")(session);
 
+const sassMiddleware = require("node-sass-middleware");
+
+//we ll put it just before the server is starting bcoz we need those pre-compiled files before the server starts
+app.use(sassMiddleware({
+    //source is from where do we pick up the scss files to convert into css
+    src: "./assets/scss",
+    //destination is where do we need to put our css files
+    dest:"./assets/css",
+    //debug mode is whether we want to display some errors tht are there in the file during compilation when it is not able to convert tht file
+    debug: true,
+    //outputStyle is do we want everything to be in a single line or multiple lines
+    outputStyle: "extended",
+    // prefix is basically where should my server look out for css files
+    prefix: "/css"
+
+}));
 
 //require cookie-parser and use it
 const cookieParser = require("cookie-parser");
