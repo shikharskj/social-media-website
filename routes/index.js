@@ -9,7 +9,7 @@ const contactController = require("../controllers/contact_controller");
 router.get("/",homeController.home);
 router.get("/contact",contactController.contact);
 router.use("/users",require("./users"));
-
+router.use("/posts",require("./posts"));
 
 //for any further routes, access from here
 //router.use("/router_name", require("./router_file"));
