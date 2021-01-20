@@ -2,11 +2,19 @@
     width: 80%;
     margin: 0 auto;
     display: flex;
+    align-items: center;
     flex-direction: column;
 }
 #feed-posts{
     width: 100%;
-   
+}
+input[type="submit"]{
+            height:2rem;
+            width:15%;
+            color: white;
+            background-color: rgb(36,37,38);
+            border: white;
+            border-radius: 0.5rem;
 }
 #post-box{
     width: 100%;
@@ -17,11 +25,13 @@
     box-shadow: 0 1px 5px 0.5px grey;
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-between;
+    padding: 0 5px;
     form{
+        width: 90%;
         display: flex;
         align-items: center;
-        justify-content: space-evenly;
+        justify-content: space-between;
 
         textarea{
             background-color: rgb(240,242,245);
@@ -33,11 +43,7 @@
             font-size: 1.5rem;
         }
         input{
-            height:2.5rem;
-            width:15%;
-            color: white;
-            background-color: black;
-            border-radius: 0.5rem;
+            height: 2.5rem;
         }
     }
 }
@@ -53,4 +59,47 @@
     border-radius: 0.5rem;
     padding: 5px;
     box-shadow: 0 1px 5px 0.5px lightgray;
+    .single-post{
+        div{
+            border-bottom: 1px solid lightgray;
+            padding: 0.5rem 0;
+        }
+        .a{
+            text-transform: capitalize;
+        }
+    }
+    .post-comments{
+        form{
+            display: flex;
+            justify-content: space-between;
+            padding: 0.5rem 0;
+            input.comment_input{
+                width: 70%;
+                height: 2rem;
+                background-color: rgb(240,242,245);
+                border-radius: 2rem;
+                border: transparent;     
+                padding-left: 10px;
+            }
+        }
+        .post-comments-list{
+            .single-comment{
+                display: flex;
+                // margin-left: -10px;
+                padding: 0.5rem 0;
+                div{
+                    padding: 0 10px;
+                }
+                .a{
+                    text-transform: capitalize;
+                }
+                .b{
+                    background-color: rgb(240,242,245);
+                    border-radius: 0.5rem;
+                }
+            }
+        }
+    }
 }
+
+

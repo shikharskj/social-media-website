@@ -2,10 +2,19 @@
   width: 80%;
   margin: 0 auto;
   display: flex;
+  align-items: center;
   flex-direction: column; }
 
 #feed-posts {
   width: 100%; }
+
+input[type="submit"] {
+  height: 2rem;
+  width: 15%;
+  color: white;
+  background-color: #242526;
+  border: white;
+  border-radius: 0.5rem; }
 
 #post-box {
   width: 100%;
@@ -16,11 +25,13 @@
   box-shadow: 0 1px 5px 0.5px grey;
   display: flex;
   align-items: center;
-  justify-content: space-evenly; }
+  justify-content: space-between;
+  padding: 0 5px; }
   #post-box form {
+    width: 90%;
     display: flex;
     align-items: center;
-    justify-content: space-evenly; }
+    justify-content: space-between; }
     #post-box form textarea {
       background-color: #f0f2f5;
       border-radius: 2rem;
@@ -30,11 +41,7 @@
       text-align: center;
       font-size: 1.5rem; }
     #post-box form input {
-      height: 2.5rem;
-      width: 15%;
-      color: white;
-      background-color: black;
-      border-radius: 0.5rem; }
+      height: 2.5rem; }
 
 #post-list-container {
   height: auto;
@@ -48,3 +55,29 @@
   border-radius: 0.5rem;
   padding: 5px;
   box-shadow: 0 1px 5px 0.5px lightgray; }
+  .posts .single-post div {
+    border-bottom: 1px solid lightgray;
+    padding: 0.5rem 0; }
+  .posts .single-post .a {
+    text-transform: capitalize; }
+  .posts .post-comments form {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 0; }
+    .posts .post-comments form input.comment_input {
+      width: 70%;
+      height: 2rem;
+      background-color: #f0f2f5;
+      border-radius: 2rem;
+      border: transparent;
+      padding-left: 10px; }
+  .posts .post-comments .post-comments-list .single-comment {
+    display: flex;
+    padding: 0.5rem 0; }
+    .posts .post-comments .post-comments-list .single-comment div {
+      padding: 0 10px; }
+    .posts .post-comments .post-comments-list .single-comment .a {
+      text-transform: capitalize; }
+    .posts .post-comments .post-comments-list .single-comment .b {
+      background-color: #f0f2f5;
+      border-radius: 0.5rem; }
