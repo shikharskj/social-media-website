@@ -1,5 +1,9 @@
+#extra-links {
+  width: 20%;
+  border-right: 4px solid lightgray; }
+
 #posts-section {
-  width: 80%;
+  width: 40%;
   margin: 0 auto;
   display: flex;
   align-items: center;
@@ -14,11 +18,11 @@ input[type="submit"] {
   color: white;
   background-color: #242526;
   border: white;
-  border-radius: 0.5rem; }
+  border-radius: 0.25rem; }
 
 #post-box {
   width: 100%;
-  min-height: 4rem;
+  min-height: 6rem;
   background-color: white;
   margin: auto;
   border-radius: 0.5rem;
@@ -42,6 +46,9 @@ input[type="submit"] {
       font-size: 1.5rem; }
     #post-box form input {
       height: 2.5rem; }
+    #post-box form div {
+      width: 50%;
+      background-color: cadetblue; }
 
 #post-list-container {
   height: auto;
@@ -74,6 +81,8 @@ input[type="submit"] {
   .posts .post-comments .post-comments-list .single-comment {
     display: flex;
     padding: 0.5rem 0; }
+    .posts .post-comments .post-comments-list .single-comment a {
+      color: black; }
     .posts .post-comments .post-comments-list .single-comment div {
       padding: 0 10px; }
     .posts .post-comments .post-comments-list .single-comment .a {
@@ -81,3 +90,18 @@ input[type="submit"] {
     .posts .post-comments .post-comments-list .single-comment .b {
       background-color: #f0f2f5;
       border-radius: 0.5rem; }
+
+#user-friends {
+  width: 20%;
+  border-left: 4px solid lightgray;
+  padding: 1.5rem 1rem 1rem 1.5rem; }
+  #user-friends .friends-box {
+    width: 100%;
+    margin: 2px;
+    height: 2rem;
+    padding: 0 5px;
+    display: flex;
+    align-items: center; }
+  #user-friends .friends-box:hover {
+    background-color: lightgray;
+    border-radius: 0.4rem; }

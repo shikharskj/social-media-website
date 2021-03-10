@@ -1,25 +1,33 @@
 // module.exports.action_name = function(req,res){    };
 const Post = require("../models/post");
-module.exports.home = function(req,res){
+const User = require("../models/user");
+module.exports.home = async function(req,res){
     // console.log(req.cookies);
     // res.cookie("user_id",25);
 
     //populate the user of each post
-    Post.find({})
-    .populate("user")
-    .populate({
-        path: "comments",
-        populate: {
+    try{
+        let posts = await Post.find({})
+        .sort("-createdAt")
+        .populate("user")
+        .populate({
+            path: "comments",
+            populate: {
             path: "user"
-        }
-    })
-    .exec(function(error,posts){
+            }   
+        });
+
+        let users = await User.find({});
+
         return res.render("home",{
             title:"HOME!!",
-            posts: posts
+            posts: posts,
+            all_users:users
         });
-    })
+    }catch(err){
+        console.log("ERROR",err);
+        return;
+    }
     
-
     
 };
