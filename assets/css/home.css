@@ -26,7 +26,7 @@ input[type="submit"] {
   background-color: white;
   margin: auto;
   border-radius: 0.5rem;
-  box-shadow: 0 1px 5px 0.5px grey;
+  box-shadow: 0 2px 5px 0.5px lightgrey;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -66,7 +66,17 @@ input[type="submit"] {
     border-bottom: 1px solid lightgray;
     padding: 0.5rem 0; }
   .posts .single-post .a {
-    text-transform: capitalize; }
+    padding-left: 0.5rem;
+    text-transform: capitalize;
+    box-shadow: 0 1px 2px 0.25px grey;
+    border-radius: 0.2rem; }
+  .posts .post-file {
+    display: flex;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid lightgray; }
+    .posts .post-file img {
+      height: 100%;
+      width: 100%; }
   .posts .post-comments form {
     display: flex;
     justify-content: space-between;
@@ -75,6 +85,7 @@ input[type="submit"] {
       width: 70%;
       height: 2rem;
       background-color: #f0f2f5;
+      box-shadow: 0 1px 5px 0.5px grey;
       border-radius: 2rem;
       border: transparent;
       padding-left: 10px; }

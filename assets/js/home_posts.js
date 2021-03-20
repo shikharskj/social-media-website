@@ -128,6 +128,6 @@
 
 
 
-    createPost();
-    convertPostsToAjax();
+    //createPost();
+   // convertPostsToAjax();
 }

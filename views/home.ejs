@@ -14,10 +14,10 @@
     
         <form action="/posts/create" id="new-post-form" enctype="multipart/form-data" method="POST">
                 <textarea id="post-i" name="content" cols="30" rows="2" placeholder="What's on your mind, <%= locals.user.name%>?" required></textarea>
-                <div id="pposts">
-                    <input type="file" name="ppost" placeholder="Photo">
-                </div>
-                <input type="submit" value="Post">
+                
+                <input type="file" name="pposts" placeholder="Photo">
+                
+                <button type="submit">POST</button>
         </form>
     
         <% } %>
@@ -40,6 +40,7 @@
         <% for(u of all_users){ %>
             <div class="friends-box">
                 <a href="/users/profile/<%= u.id %>">
+                    <img class="pro-pic" src="<%= u.avatar %>" alt="<%= u.name %>">
                     <%= u.name %>
                 </a>
             </div>
