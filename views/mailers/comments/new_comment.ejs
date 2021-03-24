@@ -1,0 +1,98 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Codeial</title>
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
+<style>
+    *{
+        box-sizing: border-box;
+        -moz-box-sizing: border-box;
+    }
+    html,body{
+        background: #eeeeee;
+        font-family: 'Open Sans', sans-serif, Helvetica, Arial;
+    }
+    img{
+        max-width: 100%;
+    }
+    /* This is what it makes reponsive. Double check before you use it! */
+    @media only screen and (max-width: 480px){
+        table tr td{
+            width: 100% !important;
+            float: left;
+        }
+    }
+</style>
+</head>
+
+<body style="background: #eeeeee; padding: 10px; font-family: 'Open Sans', sans-serif, Helvetica, Arial;">
+
+
+
+
+
+<!-- ** Table begins here
+----------------------------------->
+<!-- Set table width to fixed width for Outlook(Outlook does not support max-width) -->
+<table width="100%" cellpadding="0" cellspacing="0" bgcolor="FFFFFF" style="background: #ffffff; max-width: 600px !important; margin: 0 auto; background: #ffffff;">
+    <tr>
+        <td style="padding: 20px; text-align: center; background: rgb(59,158,196);">
+            <h1 style="color: #ffffff">Codeial</h1>
+        </td>
+    </tr>
+
+
+    <tr>
+        <td style="padding: 20px; text-align: center;">
+            <!-- ** 100% width
+            ----------------------------------->
+            <p style="font-size:30px; margin: 5px;">Hi <%= comment.user.name %>!!!</p>
+            <p>Your comment, <strong>"<%= comment.content%>"</strong> just got published!!</p>
+            <br>
+            <p>Thanks</p>
+            <p style="border-radius: 40px; -moz-border-radius: 40px; padding: 15px 20px; margin: 10px auto; background: rgb(59,158,196); display: inline-block;">
+                <a href="tel:6394816023" style="color: #fff; text-decoration: none;">Call Us (+91) 6394816023</a>
+            </p>
+        </td>
+    </tr>
+
+
+    <tr>
+        <td>
+            <img src="http://www.ohsikpark.com/samples/email/sf.jpg" />
+        </td>
+    </tr>
+
+
+    <tr>
+        <td style="padding: 20px; background: #2B2E34;">
+
+            
+            <table border="0" cellpadding="0" cellspacing="0" a>
+                <tr>
+                    <td width="50%" style="width: 50%; padding: 10px; color: #ffffff; text-align: left;" valign="top">
+                        <h2>About us</h2>
+                        <p style="font-size: 14px;">Codeial is a social media website which offers many cool features like a chat engine,a wall to share your posts and comments and a mailing service too.</p>
+                    </td>
+                    <td width="50%" style="width: 50%; padding: 10px; color: #ffffff; text-align: left;" valign="top">
+                        <h2>Contact us</h2>
+                        <!-- ** Footer contact
+                        ----------------------------------->
+                        <table border="0" style="font-size: 14px;">
+                            <tr><td>Call: (+91) 6394816023</td></tr>
+                            <tr><td>email: shikharskj21@gmail.com</td></tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+
+        </td>
+    </tr>
+</table>
+
+
+
+
+</body>
+</html>
