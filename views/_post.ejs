@@ -24,6 +24,17 @@
             <br>
             
         </div>
+        <div>
+
+            <% if (locals.user){ %>
+                <a class="toggle-like-button" data-likes="<%= post.likes.length %>" href="/likes/toggle/?id=<%=post._id%>&type=Post">
+                        <%= post.likes.length %> Likes
+                </a>
+            <% }else{ %>
+                <%= post.likes.length %> Likes
+            <% } %>
+            
+        </div>
         <div class="post-comments">
             <% if(locals.user){ %>
                 <form action="/comments/create" method="POST">

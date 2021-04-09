@@ -48,7 +48,7 @@
     flex-direction: column;
     align-items: center;
     position: absolute;
-    top: 30%;
+    top: 28%;
     left: 55%;
     padding: 10px; }
     #body-main #signin-form form, #body-main #signup-form form {
@@ -76,14 +76,29 @@
     #body-main #signin-form .gmail, #body-main #signup-form .gmail {
       height: 2rem;
       width: 18rem;
-      background-color: red;
+      background-color: black;
       border-radius: 0.5rem;
       box-shadow: 0 1px 5px 0.5px grey;
       text-align: center;
-      color: white;
       margin-bottom: 5%; }
+      #body-main #signin-form .gmail img, #body-main #signup-form .gmail img {
+        width: 1.4rem;
+        height: 1.4rem; }
     #body-main #signin-form .gmail:hover, #body-main #signup-form .gmail:hover {
-      background-color: #ea4335;
+      background-color: #242526;
+      animation: neon .08s ease-in-out infinite alternate; }
+    #body-main #signin-form .forgot-pass-btn, #body-main #signup-form .forgot-pass-btn {
+      height: 2rem;
+      width: 18rem;
+      background-color: #a3cfe8;
+      border-radius: 0.5rem;
+      box-shadow: 0 1px 5px 0.5px grey;
+      text-align: center;
+      font-size: 1.3rem;
+      color: black;
+      margin-bottom: 5%; }
+    #body-main #signin-form .forgot-pass-btn:hover, #body-main #signup-form .forgot-pass-btn:hover {
+      background-color: #3993b5;
       animation: neon .08s ease-in-out infinite alternate; }
   #body-main #signup-form {
     top: 27%; }
